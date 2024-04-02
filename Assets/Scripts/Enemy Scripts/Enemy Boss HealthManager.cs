@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class EnemyHealthManager : MonoBehaviour
+public class EnemyBossHealthManager : MonoBehaviour
 {
+    public Image healthBar;
     public float healthAmount = 100f;
-    public GameObject player;
+    [SerializeField] private Transform player;
+    public GameObject Bar;
 
 
     void Start()
@@ -13,12 +16,24 @@ public class EnemyHealthManager : MonoBehaviour
         
     }
 
+    float GetDistanceToPlayer()
+    {
+        return
+            (player.position - transform.position)
+            .magnitude;
+    }
+
     void Update()
     {
-        //Debug.Log("Health: " + healthAmount);
+        if (GetDistanceToPlayer() < 50)
+        {
+            Bar.SetActive(true);
+        }
+
         if (healthAmount <= 0)
         {
             Destroy (gameObject);
+            Bar.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.H))
@@ -30,20 +45,20 @@ public class EnemyHealthManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
+        healthBar.fillAmount = healthAmount / 100f;
     }
 
     public void Heal(float healingAmount)
     {
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+        healthBar.fillAmount = healthAmount / 100f;
     }
 
     public void OnTriggerEnter(Collider other) {
-        Debug.Log("Collided with " + other.gameObject.name);
         TakeDamage(20);
     }
 
     public void OnTriggerExit(Collider other) {
-        Debug.Log("Stopped colliding with " + other.gameObject.name);
     }
 }
