@@ -112,6 +112,14 @@ public class ChargePatrolChase : MonoBehaviour
         transform.forward = lookDir;
     }
 
+    void SetChargeDirection()
+    {
+        Debug.Log("SetChargeDirection Activated");
+        targetPoint = player.transform.position;
+        Vector3 offset = (targetPoint - transform.position).normalized * 15;
+        targetPoint = player.transform.position + offset;
+    }
+
     void Patrol()
     {
         if (CanSeePlayer())
@@ -134,6 +142,7 @@ public class ChargePatrolChase : MonoBehaviour
         if(GetDistanceToPlayer() > 20) {
             state = State.ChargeState;
             Debug.Log("Chase -> Charge");
+            SetChargeDirection();
             timer = activeTime;
             return;
         }
@@ -157,12 +166,11 @@ public class ChargePatrolChase : MonoBehaviour
         }
 
         agent.enabled = false;
-        targetPoint = player.transform.position;
-        LookAtTarget();
         Vector3 velocity = targetPoint - transform.position;
         velocity.y = 0;
         velocity.Normalize();
         velocity *= chargeSpeed * Time.deltaTime;
+        LookAtTarget();
         controller.Move(velocity);
     }
 
