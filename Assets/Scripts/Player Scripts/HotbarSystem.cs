@@ -13,7 +13,7 @@ public class HotbarSystem : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -60,6 +60,7 @@ public class HotbarSystem : MonoBehaviour
         Slot3.SetActive(false);
         Slot4.SetActive(false);
         Slot5.SetActive(false);
+
     }
 
     void Equip3()

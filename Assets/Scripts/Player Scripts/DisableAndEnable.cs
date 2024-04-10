@@ -8,10 +8,13 @@ public class DisableAndEnable : MonoBehaviour
     public float activeTime = 0.5f;
     private float timer = 0;
     public Collider Tool;
+    Animator animator;
 
-    void Start() {
+    void Start() 
+    {
         Tool.enabled = false;
         active = false;
+        animator = this.GetComponent<Animator>();
     }
  
     void Update()
@@ -21,6 +24,7 @@ public class DisableAndEnable : MonoBehaviour
             Tool.enabled = true;
             active = true;
             timer = activeTime;
+            animator.SetBool("attacking", true);
         }
 
         
@@ -30,6 +34,7 @@ public class DisableAndEnable : MonoBehaviour
         if(active && timer <= 0) {
             active = false;
             Tool.enabled = false;
+            animator.SetBool("attacking", false);
         }
     }
 }

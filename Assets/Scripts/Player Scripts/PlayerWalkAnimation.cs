@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerWalkAnimation : MonoBehaviour
 {
+    Animator animator;
+
     void Start()
     {
-        
+        animator = this.GetComponent<Animator>();
     }
 
     void Update()
