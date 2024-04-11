@@ -38,8 +38,11 @@ public class EnemyHealthManager : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other) {
-        Debug.Log("Collided with " + other.gameObject.name);
-        TakeDamage(20);
+        if(other.gameObject.tag == "Weapon") {
+            Debug.Log("Collided with " + other.gameObject.name);
+            TakeDamage(20);
+        }
+        
     }
 
     public void OnTriggerExit(Collider other) {

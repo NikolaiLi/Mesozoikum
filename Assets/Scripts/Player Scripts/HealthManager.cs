@@ -7,7 +7,7 @@ public class HealthManager : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
-
+    
     void Start()
     {
         
@@ -20,15 +20,21 @@ public class HealthManager : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            TakeDamage(20);
-        }
-
         if (Input.GetKeyDown(KeyCode.H))
         {
             Heal(5);
         }
+    }
+
+    public void OnTriggerEnter(Collider other) 
+    {
+        Debug.Log("!!!Collided with " + other.gameObject.name);
+        TakeDamage(20);
+    }
+
+    public void OnTriggerExit(Collider other) 
+    {
+        Debug.Log("!!!Stopped colliding with " + other.gameObject.name);
     }
 
     public void TakeDamage(float damage)

@@ -11,6 +11,7 @@ public class HungerManager : MonoBehaviour
     private float timer = 0;
     private float starvationInterval = 10f;
     public float starvationRate = 0.2f;
+    public GameObject Food;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class HungerManager : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Food.activeSelf && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Eating(5);
         }
