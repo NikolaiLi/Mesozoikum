@@ -10,6 +10,12 @@ public class ThirdPersonCam : MonoBehaviour
     public float speed = 6f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    public Transform playerTransform;
+
+    void Start()
+    {
+        playerTransform.position = new Vector3(playerTransform.position.x, 40.8f, playerTransform.position.z);
+    }
 
     void Update()
     {
