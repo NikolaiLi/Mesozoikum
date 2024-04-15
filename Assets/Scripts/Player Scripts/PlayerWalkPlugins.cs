@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerWalkAnimation : MonoBehaviour
 {
     Animator animator;
+    public AudioSource footstepsSound;
 
     void Start()
     {
@@ -16,10 +17,12 @@ public class PlayerWalkAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             animator.SetBool("walking", true);
+            footstepsSound.enabled = true;
         }
         else
         {
             animator.SetBool("walking", false);
+            footstepsSound.enabled = false;
         }
     }
 }

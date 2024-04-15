@@ -23,6 +23,7 @@ public class ChargePatrolChase : MonoBehaviour
     private float timer = 0;
 
     UnityEngine.AI.NavMeshAgent agent;
+    Animator animator;
 
     void Start()
     {
@@ -135,6 +136,8 @@ public class ChargePatrolChase : MonoBehaviour
             LookAtTarget();
         }
         agent.SetDestination(targetPoint);
+        animator.SetBool("walking", true);
+        animator.SetBool("charging", false);
     }
 
     void Chase()
@@ -150,6 +153,8 @@ public class ChargePatrolChase : MonoBehaviour
         targetPoint = player.transform.position;
         LookAtTarget();
         agent.SetDestination(targetPoint);
+        animator.SetBool("walking", true);
+        animator.SetBool("charging", false);
     }
 
     void Charge()
@@ -172,6 +177,8 @@ public class ChargePatrolChase : MonoBehaviour
         velocity *= chargeSpeed * Time.deltaTime;
         LookAtTarget();
         controller.Move(velocity);
+        animator.SetBool("charging", true);
+        animator.SetBool("walking", false);
     }
 
     enum State

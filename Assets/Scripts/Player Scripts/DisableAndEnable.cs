@@ -9,6 +9,7 @@ public class DisableAndEnable : MonoBehaviour
     private float timer = 0;
     public Collider Tool;
     Animator animator;
+    public AudioSource spearSound;
 
     void Start() 
     {
@@ -25,6 +26,7 @@ public class DisableAndEnable : MonoBehaviour
             active = true;
             timer = activeTime;
             animator.SetBool("attacking", true);
+            spearSound.enabled = true;
         }
 
         
@@ -35,6 +37,7 @@ public class DisableAndEnable : MonoBehaviour
             active = false;
             Tool.enabled = false;
             animator.SetBool("attacking", false);
+            spearSound.enabled = false;
         }
     }
 }
