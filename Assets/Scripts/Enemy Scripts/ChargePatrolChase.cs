@@ -29,6 +29,7 @@ public class ChargePatrolChase : MonoBehaviour
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         indexOfTarget = -1;
         NextTarget();
         LookAtTarget();
