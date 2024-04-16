@@ -7,6 +7,7 @@ public class HealthManager : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
+    public GameObject Food;
     
     void Start()
     {
@@ -20,7 +21,7 @@ public class HealthManager : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Food.activeSelf && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Heal(5);
         }
