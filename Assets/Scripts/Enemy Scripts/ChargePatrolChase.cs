@@ -17,6 +17,8 @@ public class ChargePatrolChase : MonoBehaviour
     private Vector3 targetPoint;
     private State state = State.PatrolState;
     private CharacterController controller;
+    public AudioSource runscreamSound;
+    public AudioSource footstepsSound;
     
     private bool active = false;
     public float activeTime = 5f;
@@ -168,6 +170,9 @@ public class ChargePatrolChase : MonoBehaviour
             state = State.ChaseState;
             agent.enabled = true; 
             Debug.Log("Charge -> Chase");
+            runscreamSound.enabled = false;
+            footstepsSound.enabled = false;
+
             return;
         }
 
@@ -180,6 +185,9 @@ public class ChargePatrolChase : MonoBehaviour
         controller.Move(velocity);
         animator.SetBool("charging", true);
         animator.SetBool("walking", false);
+        runscreamSound.enabled = true;
+        footstepsSound.enabled = true;
+
     }
 
     enum State
