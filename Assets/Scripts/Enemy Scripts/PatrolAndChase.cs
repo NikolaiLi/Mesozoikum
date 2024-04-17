@@ -16,14 +16,12 @@ public class PatrolAndChase : MonoBehaviour
     private Vector3 targetPoint;
     private State state = State.PatrolState;
     private CharacterController controller;
+    public AudioSource chaseSound;
 
-    
-    //Animator animator;
     UnityEngine.AI.NavMeshAgent agent;
 
     void Start()
     {
-        //animator = this.GetComponent<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         controller = GetComponent<CharacterController>();
         indexOfTarget = -1;
@@ -84,7 +82,6 @@ public class PatrolAndChase : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("Distance: " + GetDistanceToPlayer());
         if(state == State.PatrolState)
         {
             Patrol();
@@ -125,7 +122,6 @@ public class PatrolAndChase : MonoBehaviour
             LookAtTarget();
         }
         agent.SetDestination(targetPoint);
-        //animator.SetBool("running", false);
 
     }
     void Chase()
@@ -133,6 +129,7 @@ public class PatrolAndChase : MonoBehaviour
         if(!CanSeePlayer())
         {
             state = State.PatrolState;
+            chaseSound.enabled = false;
             NextTarget();
             LookAtTarget();
             return;
@@ -145,8 +142,7 @@ public class PatrolAndChase : MonoBehaviour
         velocity.Normalize();
         velocity *= moveSpeed * Time.deltaTime;
         controller.Move(velocity);
-        //animator.SetBool("running", true);
-
+        chaseSound.enabled = true;
     }
 
     enum State

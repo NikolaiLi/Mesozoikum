@@ -6,10 +6,12 @@ public class PlayerWalkAnimation : MonoBehaviour
 {
     Animator animator;
     public AudioSource footstepsSound;
+    public AudioSource windSound;
 
     void Start()
     {
         animator = this.GetComponent<Animator>();
+        windSound.enabled = true;
     }
 
     void Update()
