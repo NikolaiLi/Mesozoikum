@@ -12,6 +12,8 @@ public class HungerManager : MonoBehaviour
     private float starvationInterval = 10f;
     public float starvationRate = 0.2f;
     public GameObject Food;
+    public Animator animator;
+    public AudioSource drinkSound;
 
     void Start()
     {

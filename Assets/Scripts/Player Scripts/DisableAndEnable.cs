@@ -10,6 +10,7 @@ public class DisableAndEnable : MonoBehaviour
     public Collider Tool;
     Animator animator;
     public AudioSource spearSound;
+    public GameObject Weapon;
 
     void Start() 
     {
@@ -25,14 +26,18 @@ public class DisableAndEnable : MonoBehaviour
             Tool.enabled = true;
             active = true;
             timer = activeTime;
-            animator.SetBool("attacking", true);
+            if (Weapon.activeSelf)
+            {
             spearSound.enabled = true;
+            animator.SetBool("attacking", true);
+            }
         }
 
-        
-        if(active) {
+        if(active) 
+        {
             timer -= Time.deltaTime;
         }
+
         if(active && timer <= 0) {
             active = false;
             Tool.enabled = false;
