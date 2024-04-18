@@ -135,13 +135,13 @@ public class PatrolAndChase : MonoBehaviour
             return;
         }
         LookAtTarget();
-        agent.SetDestination(targetPoint);
         targetPoint = player.transform.position;
-        Vector3 velocity = targetPoint - transform.position;
-        velocity.y = 0;
-        velocity.Normalize();
-        velocity *= moveSpeed * Time.deltaTime;
-        controller.Move(velocity);
+        agent.SetDestination(targetPoint);
+        // Vector3 velocity = targetPoint - transform.position;
+        // velocity.y = 0;
+        // velocity.Normalize();
+        // velocity *= moveSpeed * Time.deltaTime;
+        // controller.Move(velocity);
         chaseSound.enabled = true;
     }
 

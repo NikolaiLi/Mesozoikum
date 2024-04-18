@@ -145,7 +145,7 @@ public class ChargePatrolChase : MonoBehaviour
 
     void Chase()
     {
-        if(GetDistanceToPlayer() > 20) {
+        if(GetDistanceToPlayer() > 40) {
             state = State.ChargeState;
             Debug.Log("Chase -> Charge");
             SetChargeDirection();
