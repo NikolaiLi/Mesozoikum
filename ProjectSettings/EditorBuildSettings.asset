@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Primary Scene.unity
     guid: 24e17fd7d5a5bd94aa47e52bfdec2557
+  - enabled: 1
+    path: Assets/Scenes/CaveCutscene.unity
+    guid: 2bb02b3062923e84683af09062747506
   m_configObjects: {}
