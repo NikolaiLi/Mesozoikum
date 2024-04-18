@@ -10085,8 +10085,6 @@ MonoBehaviour:
   hungerAmount: 100
   starvationRate: 2
   Food: {fileID: 572351221}
-  animator: {fileID: 0}
-  drinkSound: {fileID: 1115765238}
 --- !u!114 &938136997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10103,8 +10101,6 @@ MonoBehaviour:
   hungerAmount: 100
   starvationRate: 4
   Food: {fileID: 1465022970}
-  animator: {fileID: 0}
-  drinkSound: {fileID: 1115765238}
 --- !u!4 &954266165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4527515841b544b4588bb3c7c308b7f8, type: 3}
@@ -10739,6 +10735,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4527515841b544b4588bb3c7c308b7f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5672074362613619158, guid: 4527515841b544b4588bb3c7c308b7f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5672074362613619158, guid: 4527515841b544b4588bb3c7c308b7f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5672074362613619158, guid: 4527515841b544b4588bb3c7c308b7f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: -3651194238536708127, guid: 4527515841b544b4588bb3c7c308b7f8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18776,7 +18784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614851103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.45327768, y: 0.000000021690132, z: -0.00000001102983, w: 0.8913694}
+  m_LocalRotation: {x: 0.45327768, y: -0.000000021690132, z: 0.00000001102983, w: 0.8913694}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
