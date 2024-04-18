@@ -9,7 +9,7 @@ public class EnemyBossHealthManager : MonoBehaviour
     public float healthAmount = 100f;
     [SerializeField] private Transform player;
     public GameObject Bar;
-
+    public AudioSource screamSound;
 
     void Start()
     {
@@ -35,11 +35,6 @@ public class EnemyBossHealthManager : MonoBehaviour
             Destroy (gameObject);
             Bar.SetActive(false);
         }
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Heal(5);
-        }
     }
 
     public void TakeDamage(float damage)
@@ -59,10 +54,13 @@ public class EnemyBossHealthManager : MonoBehaviour
         if(other.gameObject.tag == "Weapon") 
         {
             Debug.Log("Collided with " + other.gameObject.name);
-            TakeDamage(20);
+            TakeDamage(5);
+            screamSound.enabled = true;
         };
     }
 
-    public void OnTriggerExit(Collider other) {
+    public void OnTriggerExit(Collider other) 
+    {
+        screamSound.enabled = false;
     }
 }

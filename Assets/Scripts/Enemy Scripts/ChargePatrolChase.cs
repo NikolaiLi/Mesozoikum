@@ -64,7 +64,7 @@ public class ChargePatrolChase : MonoBehaviour
     }
 
     bool HasCaughtPlayer() {
-        return GetDistanceToPlayer() < 30;
+        return GetDistanceToPlayer() < 35;
     }
 
     bool CanSeePlayer()

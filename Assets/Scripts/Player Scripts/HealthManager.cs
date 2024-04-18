@@ -8,7 +8,8 @@ public class HealthManager : MonoBehaviour
     public Image healthBar;
     public float healthAmount = 100f;
     public GameObject Food;
-    
+    public Animator animator;
+
     void Start()
     {
         
@@ -29,13 +30,19 @@ public class HealthManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
+        if(other.gameObject.tag == "Boss") 
+        {
+            TakeDamage(20);
+        }
         Debug.Log("!!!Collided with " + other.gameObject.name);
+        animator.SetBool("bite", true);
         TakeDamage(20);
     }
 
     public void OnTriggerExit(Collider other) 
     {
         Debug.Log("!!!Stopped colliding with " + other.gameObject.name);
+        animator.SetBool("bite", false);
     }
 
     public void TakeDamage(float damage)
