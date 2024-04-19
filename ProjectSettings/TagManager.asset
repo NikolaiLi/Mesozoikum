@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - Weapon
   - Boss
+  - CollideChecker
+  - Tail
   layers:
   - Default
   - TransparentFX

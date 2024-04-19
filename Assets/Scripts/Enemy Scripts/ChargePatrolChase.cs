@@ -22,7 +22,9 @@ public class ChargePatrolChase : MonoBehaviour
     
     private bool active = false;
     public float activeTime = 5f;
+    public float activeTime1 = 3f;
     private float timer = 0;
+    private float timer1 = 0;
 
     UnityEngine.AI.NavMeshAgent agent;
     Animator animator;
@@ -98,6 +100,10 @@ public class ChargePatrolChase : MonoBehaviour
         {
             Charge();
         }
+        else if(state == State.TailAttackState)
+        {
+            TailAttack();
+        }
     }
 
     void NextTarget()
@@ -130,6 +136,7 @@ public class ChargePatrolChase : MonoBehaviour
         {
             state = State.ChaseState;
             Debug.Log("Patrol -> Chase");
+            animator.SetBool("walking", true);
             return;
         }
 
@@ -145,7 +152,8 @@ public class ChargePatrolChase : MonoBehaviour
 
     void Chase()
     {
-        if(GetDistanceToPlayer() > 40) {
+        if(GetDistanceToPlayer() > 40) 
+        {
             state = State.ChargeState;
             Debug.Log("Chase -> Charge");
             SetChargeDirection();
@@ -153,6 +161,13 @@ public class ChargePatrolChase : MonoBehaviour
             return;
         }
 
+        if(GetDistanceToPlayer() < 8)
+        {
+            state = State.TailAttackState;
+            Debug.Log("Chase -> TailAttack");
+            timer1 = activeTime1;
+        }
+        
         targetPoint = player.transform.position;
         LookAtTarget();
         agent.SetDestination(targetPoint);
@@ -172,7 +187,6 @@ public class ChargePatrolChase : MonoBehaviour
             Debug.Log("Charge -> Chase");
             runscreamSound.enabled = false;
             footstepsSound.enabled = false;
-
             return;
         }
 
@@ -187,7 +201,22 @@ public class ChargePatrolChase : MonoBehaviour
         animator.SetBool("walking", false);
         runscreamSound.enabled = true;
         footstepsSound.enabled = true;
+    }
 
+    void TailAttack()
+    {
+        timer1 -= Time.deltaTime;
+
+        if(timer1 <= 0)
+        {
+            state = State.ChaseState;
+            agent.enabled = true; 
+            Debug.Log("TailAttack -> Chase");
+            animator.SetBool("tailattack", false);
+            return;
+        }
+        agent.enabled = false;
+        animator.SetBool("tailattack", true);
     }
 
     enum State
@@ -195,5 +224,6 @@ public class ChargePatrolChase : MonoBehaviour
         PatrolState,
         ChaseState,
         ChargeState,
+        TailAttackState,
     }
 }
