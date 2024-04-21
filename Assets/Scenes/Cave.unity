@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.5581173, g: 0.556663, b: 0.47792798, a: 1}
+  m_IndirectSpecularColor: {r: 0.55811685, g: 0.55666274, b: 0.47792768, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -425,7 +425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63655763}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48967537, y: 0.000000015002334, z: -0.000000008425544, w: 0.87190485}
+  m_LocalRotation: {x: 0.48967537, y: -0.000000015002323, z: 0.000000008425539, w: 0.87190485}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1629,6 +1629,7 @@ MonoBehaviour:
   healthAmount: 200
   player: {fileID: 1515205257}
   Bar: {fileID: 25158667}
+  screamSound: {fileID: 0}
 --- !u!114 &224808623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1654,6 +1655,7 @@ MonoBehaviour:
   runscreamSound: {fileID: 1262553690}
   footstepsSound: {fileID: 2065484978}
   activeTime: 1.7
+  activeTime1: 3
 --- !u!95 &224808624
 Animator:
   serializedVersion: 5
@@ -2987,7 +2989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435164606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48967537, y: -0.000000015002334, z: 0.000000008425544, w: 0.87190485}
+  m_LocalRotation: {x: 0.48967537, y: 0.000000015002323, z: -0.000000008425539, w: 0.87190485}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9693,7 +9695,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130286740}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48967537, y: 0.000000015002334, z: -0.000000008425544, w: 0.87190485}
+  m_LocalRotation: {x: 0.48967537, y: -0.000000015002323, z: 0.000000008425539, w: 0.87190485}
   m_LocalPosition: {x: -844.28925, y: 47.8747, z: 534.8909}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13630,10 +13632,11 @@ MonoBehaviour:
   controller: {fileID: 1515205253}
   cam: {fileID: 1130286744}
   animator: {fileID: 1515205265}
+  playerTransform: {fileID: 1515205257}
   walkSpeed: 10
   runSpeed: 20
+  rollSpeed: 20
   turnSmoothTime: 0.1
-  playerTransform: {fileID: 1515205257}
 --- !u!114 &1515205256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13704,6 +13707,11 @@ MonoBehaviour:
   healthBar: {fileID: 1557136048}
   healthAmount: 100
   Food: {fileID: 572351221}
+  animator: {fileID: 0}
+  raptoranimator: {fileID: 0}
+  biteSound: {fileID: 0}
+  tailSound: {fileID: 0}
+  activeTime: 0.5
 --- !u!95 &1515205265 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 66300152a252ffb4b97b4207686740b8, type: 3}
@@ -14921,7 +14929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614851103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.45327768, y: 0.000000021690132, z: -0.00000001102983, w: 0.8913694}
+  m_LocalRotation: {x: 0.45327768, y: -0.000000021690132, z: 0.00000001102983, w: 0.8913694}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16705,7 +16713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8e97c6d91786745bc1bf8c9e8cbaeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
+  radius: 30
 --- !u!135 &1757587393
 SphereCollider:
   m_ObjectHideFlags: 0

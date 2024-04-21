@@ -10,7 +10,7 @@ public class SceneChange : MonoBehaviour
         Collider[] cols = Physics.OverlapSphere(transform.position, radius);
         foreach(Collider col in cols) {
             if(col.transform.gameObject.CompareTag("Player")) {
-                SceneManager.LoadScene("Primary Scene");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
