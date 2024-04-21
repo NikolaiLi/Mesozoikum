@@ -9,6 +9,7 @@ public class HealthManager : MonoBehaviour
     public float healthAmount = 100f;
     public GameObject Food;
     public Animator animator;
+    public Animator raptoranimator;
     public AudioSource biteSound;
     public AudioSource tailSound;
     private bool active = false;
@@ -80,6 +81,7 @@ public class HealthManager : MonoBehaviour
         if(other.gameObject.tag == "Enemy") 
         {
             TakeDamage(20);
+            raptoranimator.SetBool("bite", true);
         }
 
         Debug.Log("!!!Collided with " + other.gameObject.name);
@@ -89,6 +91,7 @@ public class HealthManager : MonoBehaviour
     {
         Debug.Log("!!!Stopped colliding with " + other.gameObject.name);
         animator.SetBool("bite", false);
+        raptoranimator.SetBool("bite", false);
     }
 
     public void TakeDamage(float damage)
