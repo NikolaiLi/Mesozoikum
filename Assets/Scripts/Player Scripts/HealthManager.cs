@@ -50,7 +50,7 @@ public class HealthManager : MonoBehaviour
     {
         if(other.gameObject.tag == "CollideChecker") 
         {
-            TakeDamage(40);
+            TakeDamage(20);
 
             if(active == false)
             {
@@ -62,7 +62,7 @@ public class HealthManager : MonoBehaviour
 
         if(other.gameObject.tag == "Tail") 
         {
-            TakeDamage(40);
+            TakeDamage(20);
 
             if(active == false)
             {
