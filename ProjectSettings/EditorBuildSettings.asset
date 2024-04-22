@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Primary Scene.unity
     guid: 24e17fd7d5a5bd94aa47e52bfdec2557
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 20d939ef8e7b5b6458753191f7e0b29a
   m_configObjects: {}

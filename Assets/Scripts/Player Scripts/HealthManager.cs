@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -30,7 +31,9 @@ public class HealthManager : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene("DeathScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         if (Food.activeSelf && Input.GetKeyDown(KeyCode.Mouse0))
