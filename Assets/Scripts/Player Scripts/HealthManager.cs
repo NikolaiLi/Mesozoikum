@@ -10,6 +10,11 @@ public class HealthManager : MonoBehaviour
     public GameObject Food;
     public Animator animator;
     public Animator raptoranimator;
+    public Animator r1aptoranimator;
+    public Animator r2aptoranimator;
+    public Animator r3aptoranimator;
+    public Animator r4aptoranimator;
+    public Animator r5aptoranimator;
     public AudioSource biteSound;
     public AudioSource tailSound;
     private bool active = false;
@@ -82,6 +87,11 @@ public class HealthManager : MonoBehaviour
         {
             TakeDamage(20);
             raptoranimator.SetBool("bite", true);
+            r1aptoranimator.SetBool("bite", true);
+            r2aptoranimator.SetBool("bite", true);
+            r3aptoranimator.SetBool("bite", true);
+            r4aptoranimator.SetBool("bite", true);
+            r5aptoranimator.SetBool("bite", true);
         }
 
         Debug.Log("!!!Collided with " + other.gameObject.name);
@@ -92,6 +102,12 @@ public class HealthManager : MonoBehaviour
         Debug.Log("!!!Stopped colliding with " + other.gameObject.name);
         animator.SetBool("bite", false);
         raptoranimator.SetBool("bite", false);
+        r1aptoranimator.SetBool("bite", false);
+        r2aptoranimator.SetBool("bite", false);
+        r3aptoranimator.SetBool("bite", false);
+        r4aptoranimator.SetBool("bite", false);
+        r5aptoranimator.SetBool("bite", false);
+        
     }
 
     public void TakeDamage(float damage)

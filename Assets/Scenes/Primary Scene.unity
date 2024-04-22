@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 04fbf64e790b689498382ee7d201b092, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3299,7 +3299,7 @@ Transform:
   m_GameObject: {fileID: 314652811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -254, y: -208.93, z: 256.19006}
+  m_LocalPosition: {x: -254, y: -210.33, z: 256.19006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8838,7 +8838,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!222 &809404543
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8871,7 +8871,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 809404538}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 20
   m_Acceleration: 20
   avoidancePriority: 50
@@ -12932,7 +12932,7 @@ Transform:
   m_GameObject: {fileID: 1130286740}
   serializedVersion: 2
   m_LocalRotation: {x: 0.48967537, y: 0.000000015002323, z: -0.000000008425539, w: 0.87190485}
-  m_LocalPosition: {x: 178.01073, y: 50.141014, z: 1370.511}
+  m_LocalPosition: {x: 178.01073, y: 50.141014, z: 509.51093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15388,7 +15388,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -15426,7 +15426,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1321804500}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 20
   m_Acceleration: 8
   avoidancePriority: 50
@@ -15455,7 +15455,7 @@ MonoBehaviour:
   points:
   - {fileID: 478119082}
   - {fileID: 2025487610}
-  moveSpeed: 5
+  moveSpeed: 15
   targetRadius: 0.1
   visionRange: 50
   visionConeAngle: 180
@@ -16960,7 +16960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c25ff042dba4ef4caffe9ee6e33212b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -298.4393
+      value: -312.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c25ff042dba4ef4caffe9ee6e33212b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16968,7 +16968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c25ff042dba4ef4caffe9ee6e33212b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 124.30603
+      value: 103.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c25ff042dba4ef4caffe9ee6e33212b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17191,7 +17191,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -17229,7 +17229,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1427807310}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 20
   m_Acceleration: 8
   avoidancePriority: 50
@@ -17258,7 +17258,7 @@ MonoBehaviour:
   points:
   - {fileID: 1650376334}
   - {fileID: 1739823696}
-  moveSpeed: 5
+  moveSpeed: 15
   targetRadius: 0.1
   visionRange: 50
   visionConeAngle: 180
@@ -17294,7 +17294,7 @@ Transform:
   m_GameObject: {fileID: 1428822105}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -294.4493, y: -210.52393, z: -57.493958}
+  m_LocalPosition: {x: -316.13, y: -210.52393, z: -57.493958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17836,7 +17836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66300152a252ffb4b97b4207686740b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1373
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66300152a252ffb4b97b4207686740b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18662,6 +18662,11 @@ MonoBehaviour:
   Food: {fileID: 572351221}
   animator: {fileID: 224808624}
   raptoranimator: {fileID: 809404540}
+  r1aptoranimator: {fileID: 1540837693}
+  r2aptoranimator: {fileID: 1521370841}
+  r3aptoranimator: {fileID: 1891013577}
+  r4aptoranimator: {fileID: 1321804503}
+  r5aptoranimator: {fileID: 1427807313}
   biteSound: {fileID: 997602560}
   tailSound: {fileID: 106940814}
   activeTime: 0.5
@@ -18924,7 +18929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c25ff042dba4ef4caffe9ee6e33212b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -306.4393
+      value: -333.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c25ff042dba4ef4caffe9ee6e33212b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19155,7 +19160,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -19193,7 +19198,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1521370838}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 20
   m_Acceleration: 20
   avoidancePriority: 50
@@ -19222,7 +19227,7 @@ MonoBehaviour:
   points:
   - {fileID: 1428822106}
   - {fileID: 1651655606}
-  moveSpeed: 5
+  moveSpeed: 15
   targetRadius: 0.1
   visionRange: 50
   visionConeAngle: 180
@@ -19639,7 +19644,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -19677,7 +19682,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1540837690}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 20
   m_Acceleration: 20
   avoidancePriority: 50
@@ -19706,7 +19711,7 @@ MonoBehaviour:
   points:
   - {fileID: 3136821}
   - {fileID: 2132332104}
-  moveSpeed: 5
+  moveSpeed: 15
   targetRadius: 0.1
   visionRange: 50
   visionConeAngle: 180
@@ -20745,7 +20750,7 @@ Transform:
   m_GameObject: {fileID: 1650376333}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -301.4293, y: -210.18393, z: 126.10608}
+  m_LocalPosition: {x: -338.3, y: -210.18393, z: 126.10608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20776,7 +20781,7 @@ Transform:
   m_GameObject: {fileID: 1651655605}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -347.3793, y: -210.18393, z: -70.76}
+  m_LocalPosition: {x: -365.8, y: -210.18393, z: -70.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22021,7 +22026,7 @@ Transform:
   m_GameObject: {fileID: 1739823695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -248.4993, y: -210.52393, z: 118.86609}
+  m_LocalPosition: {x: -281.4, y: -210.52393, z: 68.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23541,7 +23546,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -23579,7 +23584,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1891013574}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 20
   m_Acceleration: 20
   avoidancePriority: 50
@@ -23608,7 +23613,7 @@ MonoBehaviour:
   points:
   - {fileID: 1543898651}
   - {fileID: 1192782611}
-  moveSpeed: 5
+  moveSpeed: 15
   targetRadius: 0.1
   visionRange: 50
   visionConeAngle: 180
@@ -24162,7 +24167,7 @@ Transform:
   m_GameObject: {fileID: 1922115222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 178.01073, y: 50.141014, z: 1370.511}
+  m_LocalPosition: {x: 178.01073, y: 50.141014, z: 509.51093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

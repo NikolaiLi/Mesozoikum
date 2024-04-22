@@ -116,7 +116,7 @@ public class PatrolAndChase : MonoBehaviour
             return;
         }
 
-        if ((targetPoint-transform.position).magnitude < agent.radius)
+        if ((targetPoint-transform.position).magnitude < agent.radius+3)
         {
             NextTarget();
             LookAtTarget();
