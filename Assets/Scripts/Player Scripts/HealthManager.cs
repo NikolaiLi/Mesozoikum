@@ -21,6 +21,8 @@ public class HealthManager : MonoBehaviour
     private bool active = false;
     public float activeTime = 0.5f;
     private float timer = 0;
+    public GameObject Blood;
+    public GameObject Blood1;
 
     void Start()
     {
@@ -35,6 +37,27 @@ public class HealthManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+
+        if (healthAmount <= 90)
+        {
+            Blood.SetActive(true);
+        }
+        
+        if (healthAmount >= 80)
+        {
+            Blood.SetActive(false);
+        }
+
+        if (healthAmount <= 40)
+        {
+            Blood1.SetActive(true);
+        }
+
+        if (healthAmount >= 40)
+        {
+            Blood1.SetActive(false);
+        }
+
 
         if (Food.activeSelf && Input.GetKeyDown(KeyCode.Mouse0))
         {
