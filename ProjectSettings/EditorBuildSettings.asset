@@ -24,17 +24,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Cave.unity
     guid: 353ca70112b6bb841ac71e100088da44
   - enabled: 1
-    path: Assets/Scenes/A.unity
-    guid: 858ec8d14c4658641b918e22c976828a
-  - enabled: 1
     path: Assets/Scenes/B.unity
     guid: 987ac7df13a8b3842b3bfc7b5d023c9b
+  - enabled: 1
+    path: Assets/Scenes/A.unity
+    guid: 858ec8d14c4658641b918e22c976828a
   - enabled: 1
     path: Assets/Scenes/C.unity
     guid: d4f7ab582025f3d4eaab64dd57b8ca42
   - enabled: 1
     path: Assets/Scenes/D.unity
     guid: e462304d390377b458c73fe033a4a61d
+  - enabled: 1
+    path: Assets/Scenes/C 1.unity
+    guid: 4bbc5a407d0d10e49a933516d0fc3bef
   - enabled: 1
     path: Assets/Scenes/E.unity
     guid: 6aa6ee988b6ada846a2c6b85c7caeadb
