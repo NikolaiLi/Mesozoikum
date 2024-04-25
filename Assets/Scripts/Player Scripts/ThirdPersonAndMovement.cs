@@ -17,7 +17,6 @@ public class ThirdPersonCam : MonoBehaviour
 
     bool isRolling = false;
 
-    // Juster denne offset afhængigt af din animations højde
     float animationHeightOffset = 1.0f;
 
     void Start()
@@ -60,25 +59,19 @@ public class ThirdPersonCam : MonoBehaviour
     {
         isRolling = true;
 
-        // Tag den aktuelle retning, spilleren kigger
         float targetAngle = transform.eulerAngles.y;
-        // Beregn bevægelsesvektoren baseret på den retning
         Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-        // Indstil spilleren til at bevæge sig kun fremad
         moveDir.y = 0f;
 
-        // Juster spillerens y-position baseret på animationshøjden
         Vector3 startPosition = playerTransform.position;
         Vector3 targetPosition = startPosition + Vector3.up * animationHeightOffset;
 
-        // Kontroller om den nye position er gyldig
         if (Physics.Raycast(targetPosition, Vector3.down, out RaycastHit hit, animationHeightOffset * 2))
         {
             targetPosition = hit.point + Vector3.up * animationHeightOffset;
         }
 
-        // Rull fremad i en kort tid
         for (float t = 0; t < 0.5f; t += Time.deltaTime)
         {
             playerTransform.position = Vector3.Lerp(startPosition, targetPosition, t / 0.5f);
